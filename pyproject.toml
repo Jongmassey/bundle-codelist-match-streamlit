@@ -1,3 +1,7 @@
+[project]
+name = "bundle-codelist-match-streamlit"
+version = "0.1.0"
+
 [tool.coverage.run]
 branch = true
 dynamic_context = "test_function"
