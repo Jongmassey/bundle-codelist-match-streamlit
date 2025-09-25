@@ -40,8 +40,8 @@ _compile src dst *args: virtualenv
     $BIN/pip-compile --allow-unsafe --generate-hashes --output-file={{ dst }} {{ src }} {{ args }}
 
 
-# update requirements.prod.txt if requirements.prod.in has changed
-requirements-prod *args: (_compile 'requirements.prod.in' 'requirements.prod.txt' args)
+# update requirements.txt if requirements.prod.in has changed
+requirements-prod *args: (_compile 'requirements.prod.in' 'requirements.txt' args)
 
 
 # update requirements.dev.txt if requirements.dev.in has changed
